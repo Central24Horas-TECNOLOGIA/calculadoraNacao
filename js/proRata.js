@@ -13,7 +13,6 @@ const planos = [
     { nome: "Diamante + 3 convidados", valorMensal: 419.65, valorAnual: 5035.80 }
 ];
 
-// Função para preencher os selects com as opções de planos
 function preencherSelects() {
     const selects = [document.getElementById("planosSelect"), document.getElementById("planosSelect2")];
     selects.forEach(select => {
@@ -25,7 +24,6 @@ function preencherSelects() {
     });
 }
 
-// Função para atualizar o valor mensal exibido
 function atualizarValorMensal(selectId, outputId) {
     const select = document.getElementById(selectId);
     const output = document.getElementById(outputId);
@@ -33,7 +31,6 @@ function atualizarValorMensal(selectId, outputId) {
     output.value = planoSelecionado ? planoSelecionado.valorMensal.toFixed(2) : "";
 }
 
-// Função para calcular e exibir o valor dividido por 30
 function calcularValorDivididoPor30(selectId, outputId) {
     const select = document.getElementById(selectId);
     const output = document.getElementById(outputId);
@@ -42,18 +39,15 @@ function calcularValorDivididoPor30(selectId, outputId) {
     output.value = valorDivididoPor30 ? valorDivididoPor30 : "";
 }
 
-// Função para calcular o valor proporcional baseado nos dias utilizados
 function calcularValorProporcional(diasUtilizados, valorDivididoPor30) {
     return (valorDivididoPor30 * diasUtilizados).toFixed(2);
 }
 
-// Função para calcular o valor Pro Rata
 function calcularValorProRata(valorProporcional, valorMensalUpgrade) {
     const valorProRata = (valorProporcional - valorMensalUpgrade).toFixed(2);
     return valorProRata <= 0 ? "Sem desconto" : `R$ ${Math.abs(valorProRata)}`;
 }
 
-// Função principal para atualizar todos os cálculos
 function atualizarCalculos() {
     const diasUtilizadosInput = document.getElementById("diasUtilizadosInput");
     
@@ -70,11 +64,10 @@ function atualizarCalculos() {
     const valorDivididoPor30 = parseFloat(valorDivididoPor30Output.value.replace("R$ ", ""));
     const diasUtilizados = diasUtilizadosInput.valueAsNumber;
 
-    // Validação para permitir apenas valores de 1 a 31
     if (diasUtilizados < 1 || diasUtilizados > 31) {
         alert("Por favor, insira um valor entre 1 e 31 para dias até o próximo vencimento.");
-        diasUtilizadosInput.value = ""; // Limpar o campo se o valor for inválido
-        return; // Interrompe a execução se o valor for inválido
+        diasUtilizadosInput.value = ""; 
+        return; 
     }
 
     if (diasUtilizados >= 1 && diasUtilizados <= 30) {
@@ -89,8 +82,6 @@ function atualizarCalculos() {
 }
 
 
-// Preencher os selects ao carregar a página
 window.onload = preencherSelects;
 
-// Adicionar evento para o botão "Calcular"
 document.querySelector(".btn-danger").addEventListener("click", atualizarCalculos);
