@@ -1,0 +1,78 @@
+html{
+    height: 100%;
+}
+
+img{
+    height: 5em;
+    width: 6em;
+
+}
+
+a{
+    display: flex;
+    font-family: rajdhani;
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.titulo{
+    margin-top: 5%;
+}
+
+.form{
+    width: 20em;
+    background-color: #dedddd;
+    padding: 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    margin-top: 5%;
+    font-family: rajdhani;
+    font-size: 1.25rem;
+}
+
+.resposta{
+    display: flex;
+    background-color: #dedddd;
+    padding: 2em;
+    border-radius: 1em;
+    font-family: rajdhani;
+    font-size: 1.25rem;
+}
+
+.valores{
+    margin-right: 7em;
+}
+
+body{
+    background-image: url(../images/maracana.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.prorata{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
