@@ -1,10 +1,6 @@
-html{
-    height: 100%;
-}
-
 img{
-    height: 5em;
-    width: 6em;
+    height: 4em;
+    width: 5em;
 
 }
 
@@ -57,7 +53,8 @@ a{
 body{
     background-image: url(../images/maracana.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -70,9 +67,6 @@ input[type=number] {
 
 }
 
-.prorata{
-    display:flex ;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3em;
+.form-label{
+    margin: 0;
 }
