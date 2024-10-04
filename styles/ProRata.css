@@ -1,4 +1,49 @@
-img{
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/maraca2.jpeg);
+    background-size: cover; /* Para manter a proporção */
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+#proRataSection .container {
+    margin-top: 5%;
+}
+/* Media query para telas pequenas */
+@media screen and (max-width: 1900px){
+    section {
+        transform: scale(0.9); /* Reduz o zoom para 90% */
+        transform-origin: top center; /* Mantém o alinhamento à esquerda e ao topo */
+        overflow-x: hidden; /* Evita rolagem horizontal */
+    }
+
+    .titulo {
+        font-size: 2rem; /* Ajusta o tamanho do título */
+    }
+    
+    #proRataSection .container {
+        margin-top: 1%;
+    }
+
+    .col-sm-6 {
+        padding: 1em; /* Ajusta o padding */
+    }
+
+    .form-label {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos rótulos */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Reduz o tamanho do botão */
+    }
+}
+
+/*img{
     height: 5em;
     width: 6em;
 
@@ -25,14 +70,6 @@ a{
     font-size: 1.15rem;
 }
 
-body{
-    background-image: url(../images/maracana.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 
 .input{
     background-color: #dedddd;
@@ -67,4 +104,4 @@ input[type=number] {
    -moz-appearance: textfield;
    appearance: textfield;
 
-}
+}*/

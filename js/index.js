@@ -25,6 +25,8 @@ function calculaValores() {
     const multa = estorno * 0.3;
     const calculaEstorno = estorno - multa;
 
+    
+
     // Atualiza a interface com os resultados
     document.getElementById("pacoteMensal").value = "R$ " + pacoteMensal.toFixed(2);
     document.getElementById("valorUtilizadoPlano").value = "R$ " + valorUtilizadoPlano.toFixed(2);
