@@ -62,7 +62,7 @@ function calcularValorProporcional(diasUtilizados, valorDivididoPor30) {
 
 function calcularValorProRata(valorProporcional, valorMensalUpgrade) {
     const valorProRata = (valorProporcional - valorMensalUpgrade).toFixed(2);
-    return valorProRata <= 0 ? "Sem desconto" : `R$ ${Math.abs(valorProRata)}`;
+    return valorProRata <= 0 ? "Sem desconto" : ` ${Math.abs(valorProRata)}`;
 }
 
 function atualizarCalculos() {
@@ -133,10 +133,10 @@ function calculaValores() {
 
     
 
-    // Atualiza a interface com os resultados
+    /* Atualiza a interface com os resultados
     document.getElementById("pacoteMensal").value = "R$ " + pacoteMensal.toFixed(2);
     document.getElementById("valorUtilizadoPlano").value = "R$ " + valorUtilizadoPlano.toFixed(2);
     document.getElementById("valorEstorno").value = "R$ " + calculaEstorno.toFixed(2);
-    document.getElementById("valorMulta").value = "R$ " + multa.toFixed(2);
+    document.getElementById("valorMulta").value = "R$ " + multa.toFixed(2);*/
 }
 
