@@ -1,3 +1,4 @@
+
 // Função para mostrar a seção Pro Rata
 function mostrarProRata() {
     document.getElementById('proRataSection').classList.remove('visually-hidden');
